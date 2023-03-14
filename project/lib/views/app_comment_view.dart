@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/views/drawer_view.dart';
 
 class HelpsANDfeedback extends StatelessWidget {
   const HelpsANDfeedback ({super.key});
@@ -7,6 +8,16 @@ class HelpsANDfeedback extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextEditingController _commentController = TextEditingController();    
     return Scaffold(
+      appBar : AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.cancel), 
+          onPressed: (){
+            Navigator.push(
+                context,
+     MaterialPageRoute(builder: (context) => MyDrawer()));
+          },
+          ),
+      ),
       body: Center(
               child: Container(
              padding: EdgeInsets.symmetric(horizontal: 10.0),
