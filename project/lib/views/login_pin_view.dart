@@ -1,19 +1,18 @@
-import 'package:project/viewmodel/LoginPin_viewmodel.dart';
-import 'package:project/views/HomePage_view.dart';
-import 'package:stacked/stacked.dart';
 import 'package:flutter/material.dart';
+import 'package:project/views/HomePage_view.dart';
 
-class PasswordView extends StatelessWidget {
-  var code;
-  var selectedindex;
+class PasswordView extends StatefulWidget {
+  @override
+  PasswordViewState createState() => PasswordViewState();
+}
 
-   PasswordView ({super.key});
+class PasswordViewState extends State<PasswordView> {
+  var selectedindex = 0;
+  String code = '';
 
   @override
   Widget build(BuildContext context) {
-        var selectedindex = 0;
-        String code = '';
-        TextStyle textStyle = TextStyle(
+    TextStyle textStyle = TextStyle(
       fontSize: 25,
       fontWeight: FontWeight.w500,
       color: Colors.black.withBlue(40),
@@ -21,13 +20,9 @@ class PasswordView extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     print("Code is $code");
-
-   return ViewModelBuilder<LoginPinScreenViewModel>.reactive(
-      onViewModelReady: (viewModel) {},
-      viewModelBuilder: () => LoginPinScreenViewModel(),
-      builder: (context, viewModel, child) => Scaffold(
-        backgroundColor: Colors.black,
-        body: Column(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
         children: [
           Container(
             height: height * 0.15,
@@ -229,7 +224,7 @@ class PasswordView extends StatelessWidget {
               ))
         ],
       ),
-    ));
+    );
   }
 
   addDigit(int digit) {
@@ -252,9 +247,6 @@ class PasswordView extends StatelessWidget {
       selectedindex = code.length;
     });
   }
-}
-
-void setState(Null Function() param0) {
 }
 
 class DigitHolder extends StatelessWidget {
