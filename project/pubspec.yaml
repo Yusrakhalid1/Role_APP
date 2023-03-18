@@ -32,6 +32,7 @@ dependencies:
   connectivity: ^3.0.6
   flutter_phone_direct_caller: ^2.1.1
   url_launcher: ^6.1.10
+  geolocator: ^9.0.2
   flutter:
     sdk: flutter
 

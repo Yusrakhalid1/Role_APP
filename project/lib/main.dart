@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark
       ),
     debugShowCheckedModeBanner: false,
-    home: PasswordView(),
+    home: SplashScreen(),
     );
   }
 }
