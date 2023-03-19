@@ -100,7 +100,8 @@ class Login_screen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(12.0)
                               ),
                               onPressed: (){
-                                Navigator.push(context , MaterialPageRoute(builder:(context)=> PasswordView()));
+                                // Navigator.push(context , MaterialPageRoute(builder:(context)=> PasswordView()));
+                                signin();
                               },
                               child : const Text(
                                 "Sign In" , 
