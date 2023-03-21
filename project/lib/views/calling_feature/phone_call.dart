@@ -17,10 +17,10 @@ class Phone_Call extends StatelessWidget {
         body: Center(
           child: ElevatedButton (
             onPressed: ()async{
-              FlutterPhoneDirectCaller.callNumber('+92 88888');
+              FlutterPhoneDirectCaller.callNumber('+92 520182671');
               final Uri url = Uri(
                 scheme: "tel",
-                path: "+92 88888"
+                path: "+92 520182671"
                );
                if (await canLaunchUrl(url)) {
                  await launchUrl(url);

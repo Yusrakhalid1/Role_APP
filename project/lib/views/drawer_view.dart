@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/views/HomePage_view.dart';
-import 'package:project/views/Map/tracking_view.dart';
+import 'package:project/views/Map/Map_view.dart';
 import 'package:project/views/app_comment_view.dart';
 import 'package:project/views/calling_feature/phone_call.dart';
 
@@ -28,7 +28,7 @@ class MyDrawer extends StatelessWidget {
                         MaterialPageRoute(builder: (context)=> const HomePage_view())
                         );
                     },
-                     icon: Icon(Icons.cancel)
+                     icon: const Icon(Icons.cancel)
                      ),
                 ],
               )
@@ -65,7 +65,7 @@ class MyDrawer extends StatelessWidget {
                );
             },
           ),
-          Divider(),
+         const Divider(),
         ],
       ),
     );

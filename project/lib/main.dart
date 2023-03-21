@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project/firebase_options.dart';
-import 'package:project/views/HomePage_view.dart';
-import 'package:project/views/calling_feature/phone_call.dart';
-import 'package:project/views/drawer_view.dart';
-import 'package:project/views/login_pin_view.dart';
-import 'package:project/views/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:project/views/splash_view.dart';
 

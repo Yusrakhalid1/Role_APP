@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project/components/consonants.dart';
 import 'package:project/viewmodel/loginscreen_viewmodel.dart';
 import 'package:project/views/login_pin_view.dart';
+import 'package:project/views/signup_view.dart';
 import 'package:stacked/stacked.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,8 @@ class Login_screen extends StatelessWidget {
    signin()async{
     try {
   final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
-    email: EmailtextController.text,
-    password: PasswordtextController.text
+    email: emailtextController.text,
+    password: passwordtextController.text
 
   );
     Navigator.pushReplacement(
@@ -56,7 +57,7 @@ class Login_screen extends StatelessWidget {
                       const SizedBox(height: 20,),
                        TextField(
                             obscureText: false,
-                           controller: EmailtextController,
+                           controller: emailtextController,
                           decoration:const  InputDecoration(
                              border : OutlineInputBorder(),
                           labelText: 'Enter Email',
@@ -75,7 +76,7 @@ class Login_screen extends StatelessWidget {
                               const SizedBox(height: 20,),
                            TextField(
                             obscureText: true,
-                           controller: PasswordtextController,
+                           controller: passwordtextController,
                           decoration: const InputDecoration(
                                border : OutlineInputBorder(),
                             hintText: 'Enter Password',
@@ -112,6 +113,31 @@ class Login_screen extends StatelessWidget {
                               ) ,                      
                             ),
                           ),
+                           const SizedBox(height: 40,),
+                      Container(
+                        width: 500,
+                        child: RawMaterialButton(
+                          fillColor: Colors.blue,
+                          elevation: 1.0,
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0)
+                          ),
+                          onPressed: (){
+                             Navigator.push(
+                              context ,
+                              MaterialPageRoute(builder:(context)=> signup_screen())
+                             );
+                          },
+                          child : const Text(
+                            "Sign Up" , 
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.0
+                            ),
+                          ) ,                      
+                        ),
+                      ),
                 ]
               ),
           ),

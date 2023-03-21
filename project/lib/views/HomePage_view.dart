@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/viewmodel/HomePage_viewmodel.dart';
-import 'package:project/views/Map/tracking_view.dart';
+import 'package:project/views/Map/Map_view.dart';
 import 'package:project/views/drawer_view.dart';
 import 'package:stacked/stacked.dart';
 

@@ -10,10 +10,11 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () {
+    Timer(
+      const Duration(seconds: 5), () {
     Navigator.push(
       context,
-     MaterialPageRoute(builder: (context) => Login_screen())
+     MaterialPageRoute(builder: (context) => const Login_screen())
     );
     });
   }
@@ -25,19 +26,36 @@ class SplashScreenState extends State<SplashScreen> {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-               Colors.deepOrangeAccent,
-               Colors.red
+               Color(0xfd89CFF0),
+               Color(0xfdFFFFFF)
             ],
             begin: Alignment.topRight,
              ),
         ),
         child: Center(
-          child: Text(
-          'SAFE  AND  QUICK  PAKISTAN',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20
-          )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text(
+              'SAFE  AND  QUICK  PAKISTAN',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+                color: Colors.black
+              )),
+              SizedBox(height: 20,),
+              CircularProgressIndicator(
+                 valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+              ), 
+              SizedBox(height: 20,),
+              Text(
+                'loading...',
+              style: TextStyle(
+               color: Colors.black
+              ),)
+            ],
+          ),
+          
         ),
       ),
     );

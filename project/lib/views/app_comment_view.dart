@@ -6,7 +6,7 @@ class HelpsANDfeedback extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController _commentController = TextEditingController();    
+    final TextEditingController commentController = TextEditingController();    
     return Scaffold(
       appBar : AppBar(
         leading: IconButton(
@@ -20,9 +20,9 @@ class HelpsANDfeedback extends StatelessWidget {
       ),
       body: Center(
               child: Container(
-             padding: EdgeInsets.symmetric(horizontal: 10.0),
+             padding: const EdgeInsets.symmetric(horizontal: 10.0),
              child: TextField(
-          controller: _commentController,
+          controller: commentController,
           decoration: InputDecoration(
             hintText: 'Enter your comment',
             border: OutlineInputBorder(
